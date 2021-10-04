@@ -9,6 +9,14 @@
 mvnw spring-boot:run
 ```
 
+###Docker
+Для запуска приложение в контейнере выполнить следующие команды:
+
+```sh
+mvnw spring-boot:build-image
+docker run -p 8080:8080 -t task:0.0.1-SNAPSHOT
+```
+
 ## База данных
 В реализации использовалась база данных [H2](https://www.h2database.com/html/main.html) (Memory Mode).
 
@@ -21,6 +29,7 @@ Column | Тип | Default | Nullable
 COLOR [PK] | VARCHAR(255) | None| NO
 COTTON_PART [PK] | TINYINT | None | NO
 QUANTITY | BIGINT CHECK ("QUANTITY" >= 0) | None | NO
+
 Так как не требовалось получать остатки на конкретный момент времени, 
 в БД не хранится исторические данные поступления/выбытия носков. При поступлении носков выполняется проверка, есть ли же 
 такая пара, если да то увеличивается количество. При выбытии реализован контроль остатка носков на складе.
