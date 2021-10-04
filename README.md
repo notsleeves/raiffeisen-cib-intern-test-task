@@ -18,7 +18,7 @@ docker run -p 8080:8080 -t task:0.0.1-SNAPSHOT
 ```
 
 ### Heroku
-Так же приложение доступно по [ссылке](https://raiffeisenbank-test-task.herokuapp.com/).
+Так же приложение доступно по [ссылке](https://raiffeisenbank-test-task.herokuapp.com/api/socks?color=red&operation=equal&cottonPart=70).
 
 ## База данных
 В реализации использовалась база данных [H2](https://www.h2database.com/html/main.html) (Memory Mode).
