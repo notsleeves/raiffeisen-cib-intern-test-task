@@ -4,18 +4,21 @@
 Полный текст задания размещен по [ссылке](https://github.com/Raiffeisen-DGTL/cib-interns-test-task).
 
 ## Запуск
-Для запуска приложения выполнить команду:
+Для запуска приложения локально выполнить команду:
 ```sh
 mvnw spring-boot:run
 ```
 
-###Docker
+### Docker
 Для запуска приложение в контейнере выполнить следующие команды:
 
 ```sh
 mvnw spring-boot:build-image
 docker run -p 8080:8080 -t task:0.0.1-SNAPSHOT
 ```
+
+### Heroku
+Так же приложение доступно по [ссылке](https://raiffeisenbank-test-task.herokuapp.com/).
 
 ## База данных
 В реализации использовалась база данных [H2](https://www.h2database.com/html/main.html) (Memory Mode).
